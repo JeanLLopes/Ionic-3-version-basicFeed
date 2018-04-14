@@ -1,24 +1,38 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MovieProvider } from '../../providers/movie/movie';
 
 @IonicPage()
 @Component({
   selector: 'page-feeds',
   templateUrl: 'feeds.html',
+  providers: [
+    MovieProvider
+  ]
 })
 export class FeedsPage {
   //DEFINI UMA VARIAVEL DE TESTES
   public nomeUsuario : string = "JeanLopes";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private movieProvide: MovieProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FeedsPage');
 
     //PRA MOSTRAR NA PAGINA NOS DEVEMOS COLOCAR A FUNÇÃO AQUI
-    this.SomaDeValor();
-    this.SomaValoreComParametros(10, 20)
+    //this.SomaDeValor();
+    //this.SomaValoreComParametros(10, 20)
+    this.movieProvide.GetMovies().subscribe(
+        data => {
+          console.log(data);
+        },
+        error => {
+          console.log(error)
+        })
   }
 
   //CRIANDO UMA FUNÇÃO NO TYPESCRIPT PARA O IONIC
