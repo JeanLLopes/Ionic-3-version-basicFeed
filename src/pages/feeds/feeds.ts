@@ -17,13 +17,18 @@ export class FeedsPage {
     console.log('ionViewDidLoad FeedsPage');
 
     //PRA MOSTRAR NA PAGINA NOS DEVEMOS COLOCAR A FUNÇÃO AQUI
-    this.somaDeValor()
+    this.SomaDeValor();
+    this.SomaValoreComParametros(10, 20)
   }
 
   //CRIANDO UMA FUNÇÃO NO TYPESCRIPT PARA O IONIC
   //public somaDeValor():any{}
-  public somaDeValor():void{
+  public SomaDeValor():void{
     alert("Minha função funcionou " + this.nomeUsuario)
+  }
+
+  public SomaValoreComParametros(num1: number, num2:number){
+    console.log(num1 + num2);
   }
 
 }
