@@ -14,6 +14,9 @@ export class FeedsPage {
   //DEFINI UMA VARIAVEL DE TESTES
   public nomeUsuario : string = "JeanLopes";
 
+  public listaFiles = new Array<any>();
+
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
@@ -28,7 +31,11 @@ export class FeedsPage {
     //this.SomaValoreComParametros(10, 20)
     this.movieProvide.GetMovies().subscribe(
         data => {
-          console.log(data);
+          const response = (data as any);
+          const objetoRetorno = JSON.parse(response._body);
+          this.listaFiles = objetoRetorno.results;
+
+          console.log(objetoRetorno);
         },
         error => {
           console.log(error)
