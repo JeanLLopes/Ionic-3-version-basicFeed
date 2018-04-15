@@ -32,10 +32,12 @@ export class FeedsPage {
     this.movieProvide.GetMovies().subscribe(
         data => {
           const response = (data as any);
+          console.log(data)
           const objetoRetorno = JSON.parse(response._body);
+          console.log(response._body)
           this.listaFiles = objetoRetorno.results;
-
-          console.log(objetoRetorno);
+          console.log(objetoRetorno.results)
+          console.log(objetoRetorno.results);
         },
         error => {
           console.log(error)
