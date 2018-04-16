@@ -57,33 +57,3 @@ ADICIONANO CONTRUTOR
 <p>Dentro dela deva gravar no localStorage as informações </p>
 <p>Adicionamos o um novo "provider" em C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.component.ts, com as configurações</p>
 <p>Adicionamos tambem o config no construtor da so app.component, <a>C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.component.ts</a></p>
-<<<<<<< HEAD
-=======
-
-
-<h3>ADICIONANDO NOVAS PAGINAS</h3>
-<p>roda o comando para criar novas paginas:</p>
-<br>
-ionic generate page configuracoes<br>
-ionic generate page sobre<br>
-ionic generate page perfil<br>
-Adiciona as paginas no arquivo: C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.module.ts<br>
-Adiciona na pagina de C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\tabs\tabs.html<br>
-C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\tabs\tabs.ts<br>
-Colocamos o menu lateral na pagina de configuracoes<br>
-Colocamos a pagina perfil como ROOTPAGE da pagina de configurações<br>
->>>>>>> Add pages of "Configurações", "Perfil" and "Sobre"
-
-<h3>ADICIONANDO O LOADER NA PAGINA DE FEEDS</h3>
-<br>
-<a>https://ionicframework.com/docs/components/#loading</a>
-Vamos aplicar a nova controller no contrutor da pagina de FEEDS C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\feeds\feeds.ts
-<br>
-Criamos os metodos de abrir e fechar no arquivo C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\feeds\feeds.ts<br>
-Alteramos de "ionViewDidLoad" para "ionViewDidEnter"
-
-<h3>ADICIONANDO O "REFRESHER" NA PAGINA DE FEEDS</h3>
-<br>
-<a>https://ionicframework.com/docs/api/components/refresher/Refresher/</a>
-copiamos o html do ionc para a pagina C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\feeds\feeds.html<br>
-criamos o metodo "doRefresh" para usar o refresher. 
