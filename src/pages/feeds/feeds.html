@@ -8,6 +8,11 @@
 
 
 <ion-content padding>
+<!-- COMPONENTE DE REFRESHER -->
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
   <!-- AQUI NOS RESGATAMOS A VARIAVEL CRIADA NO TYPESCRIPT E LISTAMOS OS FILMES -->
   <!-- NO ARGULAR "*" SIGNIFICA QUE ELE VAI FAZER UMA ALTERAÇÃO ESTRUTURAL NA PAGINA
   NO CASO ABAIXO VAMOS ESCREVER NOVOS HTML's -->
