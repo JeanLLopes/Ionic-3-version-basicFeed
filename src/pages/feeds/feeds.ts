@@ -15,6 +15,8 @@ export class FeedsPage {
   public nomeUsuario : string = "JeanLopes";
   public listaFiles = new Array<any>();
   public loader;
+  public refresher;
+  public isRefreshing : boolean = false;
 
   // adicionadmo public loadingCtrl: LoadingController
   constructor(
@@ -30,34 +32,11 @@ export class FeedsPage {
   ionViewDidEnter() {
     //APRESENTAMOS O CARREGANDO
     this.abreCarregando();
-
+    this.CarregarFilmes();
     console.log('ionViewDidLoad FeedsPage');
-    
-
-    //PRA MOSTRAR NA PAGINA NOS DEVEMOS COLOCAR A FUNÇÃO AQUI
-    //this.SomaDeValor();
-    //this.SomaValoreComParametros(10, 20)
-    this.movieProvide.GetMovies().subscribe(
-        data => {
-          const response = (data as any);
-          console.log(data)
-          const objetoRetorno = JSON.parse(response._body);
-          console.log(response._body)
-          this.listaFiles = objetoRetorno.results;
-          console.log(objetoRetorno.results)
-          console.log(objetoRetorno.results);
-
-          //FECHA O CARREGANDO PAGINA
-          this.fecharCarregando();
-        },
-        error => {
-          //FECHA O CARREGANDO PAGINA
-          this.fecharCarregando();
-          console.log(error)
-        })
   }
 
-  //CRIAMOS O METODO PARA ABRIR O CARREGAR
+  //CRIAMOS O METODO PARA ABRIR O CARREGANDO
   abreCarregando() {
     this.loader = this.loadingCtrl.create({
       content: "Please wait...",
@@ -66,10 +45,48 @@ export class FeedsPage {
     this.loader.present();
   }
 
+  //CRIAMOS O METODO PARA FECHAR O CARREGANDO
   fecharCarregando(){
     this.loader.dismiss();
   }
 
+  //metodo para dar refresher na pagina
+  doRefresh(refresher) {
+    this.refresher = refresher; 
+    this.isRefreshing = true; 
+    this.CarregarFilmes();
+    console.log('Begin async operation', refresher);
+  }
+
+  CarregarFilmes(){
+    //PRA MOSTRAR NA PAGINA NOS DEVEMOS COLOCAR A FUNÇÃO AQUI
+    //this.SomaDeValor();
+    //this.SomaValoreComParametros(10, 20)
+    this.movieProvide.GetMovies().subscribe(
+      data => {
+        const response = (data as any);
+        console.log(data)
+        const objetoRetorno = JSON.parse(response._body);
+        console.log(response._body)
+        this.listaFiles = objetoRetorno.results;
+        console.log(objetoRetorno.results)
+        console.log(objetoRetorno.results);
+
+        //FECHA O CARREGANDO PAGINA
+        this.fecharCarregando();
+
+
+        if(this.isRefreshing){
+          this.refresher.complete();
+          this.isRefreshing = false;
+        } 
+      },
+      error => {
+        //FECHA O CARREGANDO PAGINA
+        this.fecharCarregando();
+        console.log(error)
+      })
+  }
 
 
   //CRIANDO UMA FUNÇÃO NO TYPESCRIPT PARA O IONIC
