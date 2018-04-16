@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { MovieProvider } from '../../providers/movie/movie';
+import { FilmeDetalhesPage } from '../filme-detalhes/filme-detalhes';
 
 @IonicPage()
 @Component({
@@ -58,7 +59,7 @@ export class FeedsPage {
     console.log('Begin async operation', refresher);
   }
 
-  CarregarFilmes(){
+  public CarregarFilmes(){
     //PRA MOSTRAR NA PAGINA NOS DEVEMOS COLOCAR A FUNÇÃO AQUI
     //this.SomaDeValor();
     //this.SomaValoreComParametros(10, 20)
@@ -98,5 +99,11 @@ export class FeedsPage {
   public SomaValoreComParametros(num1: number, num2:number){
     console.log(num1 + num2);
   }
+
+  public AbrirDetalhes(filme){
+    //mandamos o ID como parametro
+    this.navCtrl.push(FilmeDetalhesPage, {id: filme.id})
+  }
+
 
 }

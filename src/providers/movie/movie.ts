@@ -13,4 +13,9 @@ export class MovieProvider {
   GetMovies(){
     return this.http.get(this.baseApiUrl + "/movie/popular?api_key=" + this.key);
   }
+
+  //CRIAMOS UM NOVOMETODO NO PROVIDER PRA ACESSAR OS DETALHES DO FILME
+  GetMoviesDetails(filmeId){
+    return this.http.get(this.baseApiUrl + "/movie/" + filmeId + "?api_key=" + this.key)
+  }
 }

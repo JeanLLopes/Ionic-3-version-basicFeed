@@ -80,7 +80,13 @@ Alteramos de "ionViewDidLoad" para "ionViewDidEnter"
 
 <h3>ADICIONANDO O "REFRESHER" NA PAGINA DE FEEDS</h3>
 <br>
-<a>https://ionicframework.com/docs/api/components/refresher/Refresher/</a>
+<a>https://ionicframework.com/docs/api/components/refresher/Refresher/</a><br>
 copiamos o html do ionc para a pagina C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\feeds\feeds.html<br>
 criamos o metodo "doRefresh" para usar o refresher. 
 
+<h3>ADICIONANDO NOVA PAGINA DE DETALHES DO FILME</h3>
+<br>
+<p>Criamos nova pagina ionic generate page filmeDetalhes</p><br>
+<p>Adicionamos a pagina ao C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.module.ts</p><br>
+<p>Criamos um novo metodo no provider C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\providers\movie\movie.ts</p><br>
+<p>Adicionamos o provider e o novo metodo ao arquivo de detalhes C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\filme-detalhes\filme-detalhes.ts</p><br>

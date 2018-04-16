@@ -31,5 +31,8 @@
     <ion-card-content>
       <p>{{filme.overview}}</p>
     </ion-card-content>
+    <br>
+    <!-- MANDAMOS O FILME POR PARAMETRO PARA A FUNÇÃO  -->
+    <button ion-button full (click)="AbrirDetalhes(filme)">Detalhes</button>
   </ion-card>
 </ion-content>
