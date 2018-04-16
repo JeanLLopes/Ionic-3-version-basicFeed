@@ -38,6 +38,8 @@ import { MovieProvider } from '../providers/movie/movie';
     HomePage,
     TabsPage
   ],
+
+  //AQUI SÃO ADICIONADOSOS PROVIDERS GLOBAIS
   providers: [
     StatusBar,
     SplashScreen,
