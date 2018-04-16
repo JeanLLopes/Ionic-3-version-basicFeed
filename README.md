@@ -51,7 +51,7 @@ C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.
 ADICIONA AS CONFIGURAÇÕES DE PROVIDER NO ts DA PAGINA DE FEEDS
 ADICIONANO CONTRUTOR
 
-<h1>ARQUIVO DE CONFIGURAÇÕES</h1>
+<h3>ARQUIVO DE CONFIGURAÇÕES</h3>
 <p>criar a pasta "config" dentro de providers</p>
 <a>C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\providers\config\config.ts</a>
 <p>Dentro dela deva gravar no localStorage as informações </p>
