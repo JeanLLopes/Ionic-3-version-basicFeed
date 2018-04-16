@@ -86,4 +86,4 @@ Alteramos de "ionViewDidLoad" para "ionViewDidEnter"
 <br>
 <a>https://ionicframework.com/docs/api/components/refresher/Refresher/</a>
 copiamos o html do ionc para a pagina C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\feeds\feeds.html<br>
-criamos o metodo "doRefresh" para usar o refresher
+criamos o metodo "doRefresh" para usar o refresher. 
