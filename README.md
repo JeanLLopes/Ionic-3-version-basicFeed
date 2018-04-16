@@ -73,3 +73,9 @@ C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\ta
 Colocamos o menu lateral na pagina de configuracoes<br>
 Colocamos a pagina perfil como ROOTPAGE da pagina de configurações<br>
 >>>>>>> Add pages of "Configurações", "Perfil" and "Sobre"
+
+<h3>ADICIONANDO O LOADER NA PAGINA DE FEEDS</h3>
+Vamos aplicar a nova controller no contrutor da pagina de FEEDS C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\feeds\feeds.ts
+<br>
+Criamos os metodos de abrir e fechar no arquivo C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\feeds\feeds.ts<br>
+Alteramos de "ionViewDidLoad" para "ionViewDidEnter"
