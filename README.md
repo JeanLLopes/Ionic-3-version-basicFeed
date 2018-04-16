@@ -50,3 +50,10 @@ C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.
 
 ADICIONA AS CONFIGURAÇÕES DE PROVIDER NO ts DA PAGINA DE FEEDS
 ADICIONANO CONTRUTOR
+
+<h1>ARQUIVO DE CONFIGURAÇÕES</h1>
+<p>criar a pasta "config" dentro de providers</p>
+<a>C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\providers\config\config.ts</a>
+<p>Dentro dela deva gravar no localStorage as informações </p>
+<p>Adicionamos o um novo "provider" em C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.component.ts, com as configurações</p>
+<p>Adicionamos tambem o config no construtor da so app.component, <a>C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.component.ts</a></p>
