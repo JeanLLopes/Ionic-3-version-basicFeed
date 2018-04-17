@@ -35,4 +35,9 @@
     <!-- MANDAMOS O FILME POR PARAMETRO PARA A FUNÇÃO  -->
     <button ion-button full (click)="AbrirDetalhes(filme)">Detalhes</button>
   </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
 </ion-content>

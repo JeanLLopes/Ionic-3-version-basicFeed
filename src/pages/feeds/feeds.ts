@@ -19,6 +19,10 @@ export class FeedsPage {
   public refresher;
   public isRefreshing : boolean = false;
 
+  //INFINITE
+  public page = 1
+  public infiniteScrool;
+
   // adicionadmo public loadingCtrl: LoadingController
   constructor(
     public navCtrl: NavController, 
@@ -38,7 +42,7 @@ export class FeedsPage {
   }
 
   //CRIAMOS O METODO PARA ABRIR O CARREGANDO
-  abreCarregando() {
+  public abreCarregando() {
     this.loader = this.loadingCtrl.create({
       content: "Please wait...",
       duration: 3000
@@ -47,35 +51,37 @@ export class FeedsPage {
   }
 
   //CRIAMOS O METODO PARA FECHAR O CARREGANDO
-  fecharCarregando(){
+  public fecharCarregando(){
     this.loader.dismiss();
   }
 
   //metodo para dar refresher na pagina
-  doRefresh(refresher) {
+  public doRefresh(refresher) {
     this.refresher = refresher; 
     this.isRefreshing = true; 
     this.CarregarFilmes();
     console.log('Begin async operation', refresher);
   }
 
-  public CarregarFilmes(){
+  public CarregarFilmes(newPage : boolean = false){
     //PRA MOSTRAR NA PAGINA NOS DEVEMOS COLOCAR A FUNÇÃO AQUI
     //this.SomaDeValor();
     //this.SomaValoreComParametros(10, 20)
-    this.movieProvide.GetMovies().subscribe(
+    this.movieProvide.GetMovies(this.page).subscribe(
       data => {
         const response = (data as any);
         console.log(data)
         const objetoRetorno = JSON.parse(response._body);
-        console.log(response._body)
-        this.listaFiles = objetoRetorno.results;
-        console.log(objetoRetorno.results)
-        console.log(objetoRetorno.results);
+        
+        if(newPage){
+          this.listaFiles = this.listaFiles.concat(objetoRetorno.results)
+          this.infiniteScrool.complete();
+        }else{
+          this.listaFiles = objetoRetorno.results;
+        }
 
         //FECHA O CARREGANDO PAGINA
         this.fecharCarregando();
-
 
         if(this.isRefreshing){
           this.refresher.complete();
@@ -105,5 +111,11 @@ export class FeedsPage {
     this.navCtrl.push(FilmeDetalhesPage, {id: filme.id})
   }
 
+  public doInfinite(infiniteScroll) {
+    console.log('Begin async operation');
 
+    this.page++;
+    this.infiniteScrool = infiniteScroll;
+    this.CarregarFilmes(true);
+  }
 }
