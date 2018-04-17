@@ -108,3 +108,16 @@ criamos o metodo "doRefresh" para usar o refresher.
 <br>Adicionamos o novo provider a pagina C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\atletas\atletas.ts
 <br>Aplicamos configurações de "proxy" no arquivo C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\ionic.config.json
 <br>Aplicamos as alterações no arquivo C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\providers\cartola\cartola.ts
+<br>
+<h3>ADICIONANDO USO DE CAMERA PELO APP</h3>
+<br>Adicionamos uma nova pagina ionic generate page camera
+<br>ADICIONAMOS A PAGINA AO ARQUIVO DE C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.module.ts
+<br>ADICIONAMOS A PAGINA AO ARQUIVO DE C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\tabs\tabs.ts
+<br>ADICIONAMOS A PAGINA AO ARQUIVO DE C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\tabs\tabs.html
+<br>https://ionicframework.com/docs/native/camera/
+<br>ionic cordova plugin add cordova-plugin-camera
+<br>npm install --save @ionic-native/camera
+<br>Adicionamos a plataforma do browser no nosso APP, para que ele possa usar as configurações do nosso computador como um dispositivo
+<br>ionic cordova platform add browser
+<br>apos isso para usar o comando abaixo para rodar o app, forçando o para rodar no browser
+<br>ionic cordova run browser

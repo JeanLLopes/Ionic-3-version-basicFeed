@@ -20,6 +20,7 @@ import { PerfilPageModule } from '../pages/perfil/perfil.module';
 import { FilmeDetalhesPageModule } from '../pages/filme-detalhes/filme-detalhes.module';
 import { CartolaProvider } from '../providers/cartola/cartola';
 import { AtletasPageModule } from '../pages/atletas/atletas.module';
+import { CameraPageModule } from '../pages/camera/camera.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AtletasPageModule } from '../pages/atletas/atletas.module';
     SobrePageModule,
     PerfilPageModule,
     FilmeDetalhesPageModule,
-    AtletasPageModule
+    AtletasPageModule,
+    CameraPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
