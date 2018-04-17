@@ -90,9 +90,21 @@ criamos o metodo "doRefresh" para usar o refresher.
 <p>Adicionamos a pagina ao C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.module.ts</p>
 <p>Criamos um novo metodo no provider C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\providers\movie\movie.ts</p>
 <p>Adicionamos o provider e o novo metodo ao arquivo de detalhes C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\filme-detalhes\filme-detalhes.ts</p>
-
+<br>
 <h3>ADICIONANDO COMPONENTE DE INFINETE SCROOL</h3>
 <br>https://ionicframework.com/docs/api/components/infinite-scroll/InfiniteScroll/
 <br>Adicionamos o codigo HTML e o codigo ts.
 <br>C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\feeds\feeds.ts
-<b> Atualizamos os codigos para carregar filmes
+<br> Atualizamos os codigos para carregar filmes
+<br>
+<h3>ADICIONANDO NOVO PROVIDER ( CARTOLA FC ) PROBLEMA COM CORS NO IONIC</h3>
+<br>https://blog.ionicframework.com/handling-cors-issues-in-ionic/
+<br>https://api.cartolafc.globo.com/atletas/mercado
+<br>Adicionamos um novo provider ionic generate provider cartola
+<br>Adicionamos uma nova pagina ionic generate page atletas
+<br>ADICIONAMOS A PAGINA AO ARQUIVO DE C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\app\app.module.ts
+<br>ADICIONAMOS A PAGINA AO ARQUIVO DE C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\tabs\tabs.ts
+<br>ADICIONAMOS A PAGINA AO ARQUIVO DE C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\tabs\tabs.html
+<br>Adicionamos o novo provider a pagina C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\pages\atletas\atletas.ts
+<br>Aplicamos configurações de "proxy" no arquivo C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\ionic.config.json
+<br>Aplicamos as alterações no arquivo C:\Users\JEAN-NOTE\Desktop\app\Ionic-3-version-basicFeed\BasicFeeds\src\providers\cartola\cartola.ts
