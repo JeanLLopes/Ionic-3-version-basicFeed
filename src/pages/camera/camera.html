@@ -9,6 +9,6 @@
 
 <ion-content padding>
   <!-- VALIDA SE A VARIAVEL DE IMAGM ESTA PREENCHIDA, CASO SIM ELE NÃO APRESENTA -->
-  <ion-img style="width: 100%" *ngIf="imagem" [src]="imagem"></ion-img>
-  <button ion-button block >TIRAR FOTO</button>
+  <img style="width: 100%" *ngIf="imagem" [src]="imagem"/>
+  <button ion-button block (click)="TirarFoto()">TIRAR FOTO</button>
 </ion-content>

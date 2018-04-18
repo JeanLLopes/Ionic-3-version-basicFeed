@@ -15,7 +15,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class CameraPage {
   //CRIAMOS UMA VARIAVEL QUE VAI RECEBER O VALOR DE RETORNO
-  public imagem;
+  public imagem = "";
 
   //ADICIONAMOS A CAMERA AO CONTRUTOR DA CLASSE
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera) {
@@ -40,7 +40,9 @@ export class CameraPage {
     
     this.camera.getPicture(options).then((imageData) => {
      //GRAVA O RETORNO NA VARIAVEL
+     
      this.imagem = 'data:image/jpeg;base64,' + imageData;
+     console.log(this.imagem)
     }, (err) => {
      //VALIDA O ERRO
     });
