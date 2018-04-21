@@ -13,7 +13,7 @@ export class MovieProvider {
 
   //ALTERAMOS O METODO DE PEGAR FILMES PARA RECEBER A PAGINA QUE ELE DEVE PEGAR
   GetMovies(page = 1){
-    return this.http.get(this.baseApiUrl + '/movie/popular?page=${page}&api_key=' + this.key);
+    return this.http.get(this.baseApiUrl + '/movie/popular?page='+ page +'&api_key=' + this.key);
   }
 
   //CRIAMOS UM NOVOMETODO NO PROVIDER PRA ACESSAR OS DETALHES DO FILME

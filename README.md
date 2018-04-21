@@ -119,5 +119,6 @@ criamos o metodo "doRefresh" para usar o refresher.
 <br>npm install --save @ionic-native/camera
 <br>Adicionamos a plataforma do browser no nosso APP, para que ele possa usar as configurações do nosso computador como um dispositivo
 <br>ionic cordova platform add browser
+<br>https://ionicframework.com/docs/cli/cordova/platform/
 <br>apos isso para usar o comando abaixo para rodar o app, forçando o para rodar no browser
 <br>ionic cordova run browser
